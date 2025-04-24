@@ -2,8 +2,6 @@
 layout: default
 ---
 
-# Ayesha Akhtar
-
 *(774) 823-774 · [ayesha.akhtar209@gmail.com](mailto:ayesha.akhtar209@gmail.com)*  
 [GitHub](https://github.com/ayeshakhtar209) · [LinkedIn](https://www.linkedin.com/in/ayeshakhtar209/) · [Medium](https://medium.com/@ayesha.akhtar209)
 
