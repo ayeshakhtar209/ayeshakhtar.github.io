@@ -1,37 +1,93 @@
 /* styles.css */
+:root {
+  --bg: #f4f7fa;
+  --card-bg: #ffffff;
+  --primary: linear-gradient(135deg, #0066cc, #00ccd5);
+  --accent: #00ccd5;
+  --text: #333333;
+  --radius: 8px;
+  --shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
+
 header {
+  background: var(--primary);
+  color: #fff;
+  padding: 2rem 1rem;
   text-align: center;
-  margin-bottom: 2rem;
 }
-header h1 {
+
+.header-container h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
-header .contact a {
-  margin: 0 0.5rem;
+
+.contact a {
+  color: #fff;
+  margin: 0 0.75rem;
   text-decoration: none;
-  color: #0066cc;
+  font-weight: 300;
+  transition: opacity 0.3s;
 }
+.contact a:hover {
+  opacity: 0.8;
+}
+
+.main-container {
+  max-width: 800px;
+  margin: -3rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  border-top: 4px solid var(--accent);
+}
+
 h2 {
-  border-bottom: 2px solid #0066cc;
-  padding-bottom: 0.25rem;
-  margin-top: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
 }
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--accent);
+  margin-top: 0.5rem;
+}
+
 ul {
   list-style: none;
-  padding-left: 0;
 }
 ul li {
   margin-bottom: 1rem;
 }
+
 strong {
-  color: #0066cc;
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .header-container h1 {
+    font-size: 2rem;
+  }
+  .card {
+    padding: 1.25rem;
+  }
 }
