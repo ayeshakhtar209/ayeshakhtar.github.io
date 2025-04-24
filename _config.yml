@@ -1,3 +1,10 @@
-theme: jekyll-theme-minimal
-title: Ayesha's homepage
-description: Bookmark this to keep an eye on my project updates!
+# _config.yml
+title: Ayesha Akhtar
+email: ayesha.akhtar209@gmail.com
+description: "M.S. Robotics Engineer @ WPI — Resume of Ayesha Akhtar"
+theme: jekyll-theme-cayman
+
+# Optional: add your social links to make them appear in the header
+github: ayeshakhtar209
+linkedin: ayeshakhtar209
+medium: ayesha.akhtar209
