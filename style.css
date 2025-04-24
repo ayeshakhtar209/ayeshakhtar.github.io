@@ -1,0 +1,37 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #333;
+}
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+header .contact a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #0066cc;
+}
+h2 {
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 0.25rem;
+  margin-top: 2rem;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  margin-bottom: 1rem;
+}
+strong {
+  color: #0066cc;
+}
