@@ -17,8 +17,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-attachment: fixed;
+            background: #ffffff;
             min-height: 100vh;
             margin: 0;
             padding: 0;
@@ -27,17 +26,17 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0;
             width: 100%;
             box-sizing: border-box;
         }
 
         .resume-card {
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 0;
+            box-shadow: none;
             overflow: hidden;
-            margin: 20px 0;
+            margin: 0;
         }
 
         .header {
@@ -177,11 +176,10 @@
 
         .item-header {
             display: flex;
-            justify-content: between;
+            justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 15px;
-            flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
         }
 
         .item-title {
@@ -189,6 +187,7 @@
             font-weight: 700;
             color: #2c3e50;
             flex: 1;
+            min-width: 0;
         }
 
         .item-date {
@@ -198,6 +197,8 @@
             border-radius: 20px;
             font-size: 0.9em;
             font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .item-subtitle {
@@ -284,13 +285,13 @@
 
         @media (max-width: 1240px) {
             .container {
-                padding: 15px;
+                padding: 0;
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 10px;
+                padding: 0;
             }
             
             .name {
@@ -317,6 +318,10 @@
                 gap: 10px;
             }
             
+            .item-date {
+                align-self: flex-start;
+            }
+            
             .skills-grid {
                 grid-template-columns: 1fr;
             }
@@ -337,7 +342,7 @@
 
         @media (max-width: 480px) {
             .container {
-                padding: 5px;
+                padding: 0;
             }
             
             .header {
