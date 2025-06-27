@@ -1,68 +1,617 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayesha Akhtar - Robotics Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-*(774) 823-774 · [ayesha.akhtar209@gmail.com](mailto:ayesha.akhtar209@gmail.com)*  
-[GitHub](https://github.com/ayeshakhtar209) · [LinkedIn](https://www.linkedin.com/in/ayeshakhtar209/) · [Medium](https://medium.com/@ayesha.akhtar209)
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
----
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-## Education
+        .resume-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 20px 0;
+        }
 
-- **Worcester Polytechnic Institute** — M.S. in Robotics Engineering, Worcester, USA  
-- **Fatima Jinnah Women University** — B.S. in Computer Science, Rawalpindi, Pakistan  
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
----
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+            animation: slide 20s linear infinite;
+        }
 
-## Projects
+        @keyframes slide {
+            0% { transform: translateX(-50px) translateY(-50px); }
+            100% { transform: translateX(50px) translateY(50px); }
+        }
 
-- **Adaptive Fin Ray Gripper** (WPI Soft Robotics Lab, Jan 2025)  
-  Real-time perception with adaptive Hough-circle detection, depth denoising, multi-vector grasp-pose generation, 2D→3D localization & live visualization.
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
 
-- **Fin Ray Gripper** (Robots for Recycling, Dec 2024)  
-  3D-modeled gripper + Arduino + Python vision classifier for autonomous waste sorting.
+        .name {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-- **Concentric Tube Robot** (Continuum Robotics, Oct 2024)  
-  MATLAB kinematics & tip-tracking on a modular continuum-robot platform.
+        .title {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
 
-- **Grasping Motion** (ELPIS Lab, Jun 2024)  
-  AnyGrasp-based planner in ROS/Python for occluded-object UR5 grasps.
+        .fulbright-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            animation: pulse 2s infinite;
+        }
 
-- **Speech-To-Code IDE** (Undergrad Capstone, May 2018)  
-  C# IDE using Microsoft Speech API to convert speech into code for visually impaired developers.
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4); }
+            50% { box-shadow: 0 4px 25px rgba(243, 156, 18, 0.6); }
+            100% { box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4); }
+        }
 
----
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
 
-## Skills & Tools
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s ease;
+        }
 
-**Languages & Platforms:**  
-Python · C/C++ · SQL · Git · Linux (Ubuntu) · ROS2 · MATLAB · SolidWorks · Tableau · PowerBI · Jira  
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
 
-**Libraries & Frameworks:**  
-Pandas · NumPy · Matplotlib · OpenCV  
+        .content {
+            padding: 0;
+        }
 
-**Relevant Courses:**  
-Robot Dynamics · Controls · Motion Planning · HRI · Continuum Robotics · AI · Computer Vision · NLP · Advanced Navigation · ML  
+        .section {
+            padding: 50px 40px;
+            border-bottom: 1px solid #eee;
+        }
 
----
+        .section:last-child {
+            border-bottom: none;
+        }
 
-## Experience
+        .section-title {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 15px;
+        }
 
-- **Associate Analytics Engineer**, Jazz PMCL (Islamabad) — Jun 2021–Jul 2023  
-  Built ETL & Data Lake for real-time analytics; resolved 100+ issues/month; Spark/Kafka workflows; Tableau dashboards; Teradata modeling.
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            border-radius: 2px;
+        }
 
-- **Associate Software Engineer**, Code for Pakistan (Islamabad) — Sep 2018–Feb 2020  
-  Android app for ICTA citizen services; Pakistan Citizens Portal; Open Data Portal (Drupal 7).
+        .education-item, .experience-item, .project-item {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-- **Web Programming Intern**, CyberVision (Islamabad) — Jun 2017–Jul 2017  
-  Front- & back-end development with HTML/CSS/JS, PHP & Drupal 7.
+        .education-item:hover, .experience-item:hover, .project-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
 
----
+        .item-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-## Extracurricular
+        .item-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2c3e50;
+            flex: 1;
+        }
 
-- Founder & President, Pakistani Students Association @ WPI  
-- Session Chair, Grace Hopper Conference  
-- Panelist, DevFest 2022 (GDG Islamabad)  
-- Chapter Lead, Pakistani Women in Computing (PWiC)  
-- Trainer, Women Techmakers Hackathon x Google Study Jam  
+        .item-date {
+            background: #3498db;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .item-subtitle {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .item-description {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .item-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .item-description li {
+            margin-bottom: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-top: 4px solid #3498db;
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .activity-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+            transition: transform 0.3s ease;
+        }
+
+        .activity-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .name {
+                font-size: 2.5em;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: #e74c3c;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="resume-card">
+            <header class="header">
+                <div class="header-content">
+                    <h1 class="name">Ayesha Akhtar</h1>
+                    <p class="title">Robotics Engineer & AI Researcher</p>
+                    <div class="fulbright-badge">
+                        <i class="fas fa-star"></i> Fulbright Scholar
+                    </div>
+                    <div class="contact-info">
+                        <a href="tel:7748237774" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            (774) 823-7774
+                        </a>
+                        <a href="mailto:ayesha.akhtar209@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            ayesha.akhtar209@gmail.com
+                        </a>
+                        <a href="#" class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="#" class="contact-item">
+                            <i class="fab fa-github"></i>
+                            Github
+                        </a>
+                        <a href="#" class="contact-item">
+                            <i class="fab fa-medium"></i>
+                            Medium
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                    
+                    <div class="education-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Master of Science in Robotics Engineering</h3>
+                                <p class="item-subtitle">Worcester Polytechnic Institute • Worcester, USA</p>
+                                <div class="fulbright-badge" style="margin: 10px 0; font-size: 0.9em;">
+                                    <i class="fas fa-trophy"></i> Fulbright Scholar
+                                </div>
+                            </div>
+                            <span class="item-date">2023-2025</span>
+                        </div>
+                        <div class="item-description">
+                            <p>Pursuing advanced studies in robotics engineering with focus on continuum robotics, motion planning, and human-robot interaction. <strong>Awarded the prestigious Fulbright Scholarship</strong> to pursue graduate studies in the United States.</p>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Bachelor of Science in Computer Science</h3>
+                                <p class="item-subtitle">Fatima Jinnah Women University • Rawalpindi, Pakistan</p>
+                            </div>
+                            <span class="item-date">2014-2018</span>
+                        </div>
+                        <div class="item-description">
+                            <p>Graduated with strong foundation in computer science fundamentals, algorithms, and software engineering principles.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
+                    
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Associate Analytics Engineer</h3>
+                                <p class="item-subtitle">Jazz PMCL • Islamabad, Pakistan</p>
+                            </div>
+                            <span class="item-date">Jun 2021 – Jul 2023</span>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Excelled in high-pressure environment, collaborating with clients and business teams to assess project scope, deliver time-sensitive ad-hoc reports, and resolve 100+ complex issues monthly</li>
+                                <li>Managed ETL operations, building Data Lake for swift data access and analysis. Implemented real-time HTTP & file-based triggers for DPI & segmentation using Apache tools (Hadoop, Spark, Kafka, Zookeeper)</li>
+                                <li>Executed data integration & automation using diverse tools (Informatica, shell scripting, Python), translating business needs to interactive reports/dashboards (MSTR, Tableau)</li>
+                                <li>Conducted Pre/Post campaign analysis (Unica), including Control and Target group analysis for stakeholders</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Co-Founder</h3>
+                                <p class="item-subtitle">TactonBiotic • Islamabad, Pakistan</p>
+                            </div>
+                            <span class="item-date">Apr 2021 – Jun 2021</span>
+                        </div>
+                        <div class="item-description">
+                            <p>Conceived Retail-assisting project Yugen, secured PKR 500,000 grant & incubation as top-5 winner (out of 30) in Dr. ASK 500K Grant Challenge at IoBM University.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Research Associate</h3>
+                                <p class="item-subtitle">TUKL – NUST R&D Center • Islamabad, Pakistan</p>
+                            </div>
+                            <span class="item-date">Mar 2020 – Mar 2021</span>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Developed Judicial Automation with Verdict Prediction system with Supreme Court of Pakistan using NLP (BERT)</li>
+                                <li>Developed algorithm using OpenCV and NLP for data extraction and processing from Guitar Catalogue</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Associate Software Engineer</h3>
+                                <p class="item-subtitle">Code for Pakistan • Islamabad, Pakistan</p>
+                            </div>
+                            <span class="item-date">Sep 2018 – Feb 2020</span>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Spearheaded development of Android app for Islamabad Administration (ICTA), facilitating citizen services</li>
+                                <li>Contributed to development of Pakistan Citizens Portal app with PMDU, enhancing nationwide complaint resolution</li>
+                                <li>Led design & development of Pakistan's first Open Data Portal, democratizing data access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+                    
+                    <div class="project-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Fin Ray Gripper - Robots for Recycling</h3>
+                            </div>
+                            <span class="item-date">Dec 2024</span>
+                        </div>
+                        <div class="item-description">
+                            <p>Designed and implemented a Fin Ray gripper using SolidWorks and Arduino, integrating it with a computer vision-based waste classification system to autonomously sort recyclable and non-recyclable items on a conveyor belt.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">SolidWorks</span>
+                                <span class="tech-tag">Arduino</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Computer Vision</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Concentric Tube Robot - Continuum Robotics</h3>
+                            </div>
+                            <span class="item-date">Oct 2024</span>
+                        </div>
+                        <div class="item-description">
+                            <p>Built and programmed a low-cost, modular Concentric Tube Robot platform, implementing kinematics in MATLAB and conducting tip-tracking experiments.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">MATLAB</span>
+                                <span class="tech-tag">Robotics</span>
+                                <span class="tech-tag">Control Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">ELPIS Lab - Motion Planning Research</h3>
+                            </div>
+                            <span class="item-date">Jun 2024</span>
+                        </div>
+                        <div class="item-description">
+                            <p>Implemented a novel grasping algorithm based on AnyGrasp for Motion Planning under uncertainty to grasp objects with occlusions, incomplete geometric information, and sensing limitations.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">ROS</span>
+                                <span class="tech-tag">Linux</span>
+                                <span class="tech-tag">Motion Planning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Speech-To-Code: Intelligent IDE for Visually Impaired</h3>
+                            </div>
+                            <span class="item-date">May 2018</span>
+                        </div>
+                        <div class="item-description">
+                            <p>Developed undergraduate Capstone project - a Windows IDE application featuring Speech accessibility to make programming easy for visually impaired developers using Microsoft Speech API.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">AlterNet</span>
+                                <span class="tech-tag">Microsoft Speech API</span>
+                                <span class="tech-tag">Accessibility</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3><i class="fas fa-code"></i> Languages & Platforms</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">C/C++</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">ROS</span>
+                                <span class="skill-tag">MATLAB</span>
+                                <span class="skill-tag">SolidWorks</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3><i class="fas fa-layer-group"></i> Libraries & Frameworks</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">pandas</span>
+                                <span class="skill-tag">NumPy</span>
+                                <span class="skill-tag">Matplotlib</span>
+                                <span class="skill-tag">Tableau</span>
+                                <span class="skill-tag">Apache Hadoop</span>
+                                <span class="skill-tag">Apache Spark</span>
+                                <span class="skill-tag">Kafka</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3><i class="fas fa-brain"></i> Specializations</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Robot Dynamics</span>
+                                <span class="skill-tag">Motion Planning</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">NLP</span>
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Continuum Robotics</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-star"></i> Leadership & Activities</h2>
+                    <div class="activities-grid">
+                        <div class="activity-item">
+                            <h3><i class="fas fa-users"></i> Founder & President</h3>
+                            <p>Pakistani Students Association, WPI</p>
+                        </div>
+                        <div class="activity-item">
+                            <h3><i class="fas fa-microphone"></i> Session Chair Volunteer</h3>
+                            <p>Grace Hopper Conference</p>
+                        </div>
+                        <div class="activity-item">
+                            <h3><i class="fas fa-comments"></i> Discussion Panelist</h3>
+                            <p>DevFest 2022, GDG Islamabad</p>
+                        </div>
+                        <div class="activity-item">
+                            <h3><i class="fas fa-map-marker-alt"></i> Chapter Lead</h3>
+                            <p>Pakistani Women in Computing (PWiC)</p>
+                        </div>
+                        <div class="activity-item">
+                            <h3><i class="fas fa-chalkboard-teacher"></i> Trainer</h3>
+                            <p>Women Techmakers Hackathon x Google Study Jam</p>
+                        </div>
+                        <div class="activity-item">
+                            <h3><i class="fas fa-user-tie"></i> Vice Chairperson</h3>
+                            <p>IEEE Computer Society, FJWU Student Branch</p>
+                        </div>
+                        <div class="activity-item">
+                            <h3><i class="fas fa-laptop-code"></i> Tech Lead</h3>
+                            <p>Google Developers Group (GDG), Islamabad</p>
+                        </div>
+                        <div class="activity-item">
+                            <h3><i class="fas fa-certificate"></i> ML Course</h3>
+                            <p>Andrew Ng, Coursera</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="footer">
+                <p>&copy; 2025 Ayesha Akhtar. All rights reserved. | Built with ❤️ for GitHub Pages</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
