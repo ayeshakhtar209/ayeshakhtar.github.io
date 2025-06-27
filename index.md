@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayesha Akhtar - Robotics Engineer</title>
+    <title>Ayesha Akhtar | Fulbright Scholar | Robotics Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9InVybCgjZ3JhZGllbnQwXzQ1XzEyMykiLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+CjxwYXRoIGQ9Ik0yMC4yIDguNGMtLjIgMC0uNC0uMS0uNS0uM2wtMS44LTEuOGMtLjMtLjMtLjMtLjggMC0xLjFzLjgtLjMgMS4xIDBsMS44IDEuOGMuMy4zLjMuOCAwIDEuMS0uMS4yLS4zLjMtLjUuM3ptLTEyLjggNGMwLS40LS40LS44LS44LS44aC0yLjRjLS40IDAtLjguNC0uOC44czQuOC40LjggMGgyLjRjLjQgMCAuOC0uNC44LS44em0tLjggNGMtLjQgMC0uOC4zLS44LjZ2Mi44YzAgLjMuMy42LjguNnMuOC0uMy44LS42di0yLjhjMC0uMy0uMy0uNi0uOC0uNnptMy4yLTkuNnY2YzAgLjQtLjMuOC0uOC44aC0yLjRjLS40IDAtLjgtLjMtLjgtLjh2LTZIMS40YzAgLjQgMS4yLjggMi40LjhoMi40LS40IDAtLjgtLjMtLjgtLjh6IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwXzQ1XzEyMyIgeDE9IjAiIHkxPSIwIiB4Mj0iMzIiIHkyPSIzMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNjY3ZWVhIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzc2NGJhMiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -17,13 +18,18 @@
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
             min-height: 100vh;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .resume-card {
@@ -106,6 +112,7 @@
             gap: 30px;
             flex-wrap: wrap;
             margin-top: 30px;
+            padding: 0 20px;
         }
 
         .contact-item {
@@ -246,6 +253,7 @@
             border-radius: 20px;
             font-size: 0.9em;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         .activities-grid {
@@ -274,6 +282,12 @@
             font-size: 0.9em;
         }
 
+        @media (max-width: 1240px) {
+            .container {
+                padding: 15px;
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -283,6 +297,10 @@
                 font-size: 2.5em;
             }
             
+            .title {
+                font-size: 1.2em;
+            }
+            
             .section {
                 padding: 30px 20px;
             }
@@ -290,11 +308,92 @@
             .contact-info {
                 flex-direction: column;
                 gap: 15px;
+                align-items: center;
             }
             
             .item-header {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+            
+            .fulbright-badge {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 5px;
+            }
+            
+            .header {
+                padding: 40px 20px;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+            
+            .title {
+                font-size: 1.1em;
+            }
+            
+            .section {
+                padding: 25px 15px;
+            }
+            
+            .section-title {
+                font-size: 1.6em;
+            }
+            
+            .education-item, .experience-item, .project-item {
+                padding: 20px 15px;
+                margin-bottom: 25px;
+            }
+            
+            .item-title {
+                font-size: 1.1em;
+            }
+            
+            .contact-item {
+                font-size: 0.9em;
+            }
+            
+            .skill-category, .activity-item {
+                padding: 20px 15px;
+            }
+            
+            .fulbright-badge {
+                padding: 8px 16px;
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .name {
+                font-size: 1.8em;
+            }
+            
+            .section-title {
+                font-size: 1.4em;
+            }
+            
+            .education-item, .experience-item, .project-item {
+                padding: 15px 10px;
             }
         }
 
@@ -308,10 +407,11 @@
         .tech-tag {
             background: #e74c3c;
             color: white;
-            padding: 4px 12px;
+            padding: 6px 12px;
             border-radius: 15px;
-            font-size: 0.8em;
+            font-size: 0.85em;
             font-weight: 500;
+            white-space: nowrap;
         }
     </style>
 </head>
