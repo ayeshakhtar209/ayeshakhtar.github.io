@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayesha Akhtar | Fulbright Scholar | Robotics Engineer</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9InVybCgjZ3JhZGllbnQwXzQ1XzEyMykiLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+CjxwYXRoIGQ9Ik0yMC4yIDguNGMtLjIgMC0uNC0uMS0uNS0uM2wtMS44LTEuOGMtLjMtLjMtLjMtLjggMC0xLjFzLjgtLjMgMS4xIDBsMS44IDEuOGMuMy4zLjMuOCAwIDEuMS0uMS4yLS4zLjMtLjUuM3ptLTEyLjggNGMwLS40LS40LS44LS44LS44aC0yLjRjLS40IDAtLjguNC0uOC44czQuOC40LjggMGgyLjRjLjQgMCAuOC0uNC44LS44em0tLjggNGMtLjQgMC0uOC4zLS44LjZ2Mi44YzAgLjMuMy42LjguNnMuOC0uMy44LS42di0yLjhjMC0uMy0uMy0uNi0uOC0uNnptMy4yLTkuNnY2YzAgLjQtLjMuOC0uOC44aC0yLjRjLS40IDAtLjgtLjMtLjgtLjh2LTZIMS40YzAgLjQgMS4yLjggMi40LjhoMi40LS40IDAtLjgtLjMtLjgtLjh6IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwXzQ1XzEyMyIgeDE9IjAiIHkxPSIwIiB4Mj0iMzIiIHkyPSIzMiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNjY3ZWVhIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzc2NGJhMiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+Cjwvc3ZnPgo=">
+    <link rel="icon" type="image/svg+xml" href="https://dreamemoji.com/wp-content/uploads/2022/03/1065.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -42,10 +42,12 @@
         .header {
             background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
-            padding: 60px 40px;
+            padding: 60px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
         }
 
         .header::before {
@@ -73,6 +75,9 @@
         .header-content {
             position: relative;
             z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
         }
 
         .name {
@@ -111,7 +116,6 @@
             gap: 30px;
             flex-wrap: wrap;
             margin-top: 30px;
-            padding: 0 20px;
         }
 
         .contact-item {
@@ -166,6 +170,7 @@
             background: #f8f9fa;
             border-radius: 15px;
             border-left: 5px solid #3498db;
+            border: 1px solid #e9ecef;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -233,6 +238,7 @@
             padding: 25px;
             border-radius: 15px;
             border-top: 4px solid #3498db;
+            border: 1px solid #e9ecef;
         }
 
         .skill-category h3 {
@@ -268,6 +274,7 @@
             padding: 20px;
             border-radius: 10px;
             border-left: 4px solid #e74c3c;
+            border: 1px solid #e9ecef;
             transition: transform 0.3s ease;
         }
 
@@ -292,6 +299,10 @@
         @media (max-width: 768px) {
             .container {
                 padding: 0;
+            }
+            
+            .header-content {
+                padding: 0 20px;
             }
             
             .name {
@@ -346,7 +357,11 @@
             }
             
             .header {
-                padding: 40px 20px;
+                padding: 40px 0;
+            }
+            
+            .header-content {
+                padding: 0 20px;
             }
             
             .name {
